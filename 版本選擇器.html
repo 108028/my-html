@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁導入器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select {
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>選擇要導入的網頁版本：</h1>
+    <form id="redirectForm">
+        <label for="pageSelect">選擇網頁的版本：</label>
+        <select id="pageSelect">
+            <option value="./index.html">1.0</option>
+            <option value="./index.html2.0">2.0</option>
+            <!-- 可以加入更多選項 -->
+        </select>
+        <br>
+        <button type="submit">前往</button>
+    </form>
+
+    <script>
+        document.getElementById('redirectForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var selectedPage = document.getElementById('pageSelect').value;
+            window.location.href = selectedPage;
+        });
+    </script>
+</body>
+</html>
