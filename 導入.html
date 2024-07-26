@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>項目損毀</title>
+    <script>
+// 獲取網址參數
+const params = new URLSearchParams(window.location.search);
+        const url = params.get('url');
+
+        // 如果有提供網址，則進行導入處理
+        if (url) {
+            // 使用 setTimeout 模擬後端處理
+            setTimeout(() => {
+                // 假設這裡是後端處理，成功直接導入，失敗顯示相應的訊息
+                window.location.href = url; // 直接跳轉到提供的網址
+            }, 2000); // 模擬2秒後的處理結果
+        } else {
+            // 如果沒有提供網址，顯示失敗訊息
+            document.getElementById("failureMessage").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>此項目被損毀</h1>
+    <p><a onclick="goBack()" class="button">回去</a>
+    </p>
+   </body>
+</html>

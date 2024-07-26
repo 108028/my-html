@@ -24,4 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
   window.location.href = mailtoUrl;
  });
 });
-(adsbygoogle = window.adsbygoogle || []).push({});
+function redirectToImport(url) {
+    window.location.href = url;
+}
