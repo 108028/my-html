@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./圖標.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <title>導入網頁</title>
+    <script>
+        // 獲取URL參數
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // 導向目標網頁
+        function redirectToUrl() {
+            var url = getQueryParam('url');
+            if (url) {
+                try {
+                    // 检查 URL 是否是有效的
+                    var decodedUrl = decodeURIComponent(url);
+                    var a = document.createElement('a');
+                    a.href = decodedUrl;
+                    if (a.protocol === 'http:' || a.protocol === 'https:') {
+                        window.location.href = decodedUrl;
+                    } else {
+                        document.getElementById('urlContent').textContent = '無效的 URL 協議';
+                    }
+                } catch (e) {
+                    document.getElementById('urlContent').textContent = 'URL 解碼錯誤';
+                }
+            } else {
+                document.getElementById('urlContent').textContent = '無效的 URL';
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        // 在文档加载完成后执行
+        window.onload = function() {
+            redirectToUrl();
+        };
+    </script>
+</head>
+<body>
+    <h1>此項目被損毀</h1>
+    <p><a href="#" onclick="goBack()" class="button">回去</a></p>
+    <p><a href="#" onclick="redirectToUrl()" class="button">重試</a></p>
+    <h1>你要去的網站</h1>
+    <p id="urlContent"></p>
+</body>
+</html>

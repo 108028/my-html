@@ -21,11 +21,3 @@ document.addEventListener('DOMContentLoaded', function() {
    '?subject=' + encodeURIComponent(subject) +
    '&body=' + encodeURIComponent(body);
   // 開啟郵件客戶端
-
-//導入
-  window.location.href = mailtoUrl;
- });
-});
-function url(url) {
-    window.location.href = url;
-}
