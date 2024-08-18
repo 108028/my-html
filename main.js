@@ -3,9 +3,9 @@ document.getElementById('refreshButton').addEventListener('click', function() {
  location.reload();
 });
 //聯絡我 > 表單
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded'), function() {
  var form = document.querySelector('form');
- form.addEventListener('submit', function(event) {
+ form.addEventListener('submit'), function(event) {
   // 防止預設表單提交
   event.preventDefault();
   // 從表單資料建立電子郵件正文
@@ -21,3 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
    '?subject=' + encodeURIComponent(subject) +
    '&body=' + encodeURIComponent(body);
   // 開啟郵件客戶端
+  function navigateWithUrl(url) {
+    // 构造目标 URL，并附加查询字符串
+    var targetUrl = 'import.html?url=' + encodeURIComponent(url);
+    window.location.href = targetUrl;
+    }
+  }
+}

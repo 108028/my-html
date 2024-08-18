@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerry's HTML</title>
     <link rel="icon" href="./圖標.jpg" type="image/icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://108028.github.io/my-html-css/按鈕.css">
+    <link rel="stylesheet" href="https://108028.github.io/my-html-css/圖片.css">
+    <link rel="stylesheet" href="https://108028.github.io/my-html-css/導航列.css">
+    <link rel="stylesheet" href="https://108028.github.io/my-html-css/關於.css">
+    <link rel="stylesheet" href="https://108028.github.io/my-html-css/.tyle.css">
 </head>
 <body>
     <header>
         <!-- 導航列 -->
-        <img src="./圖標.ico" alt="網站圖標" class="img-h1">
+        <img src="./圖標.ico" alt="網站圖標" class="img">
         <h1><a id="refreshButton" href="#">Jerry</a></h1>
         <nav>
             <ul>
@@ -26,7 +30,7 @@
     <main>
         <section id="about">
             <h2>關於我</h2>
-            <span class="about-me">
+            <div class="about-me">
                 <p>連結</p>
                 <!-- 描述自己 -->
                 <p><a onclick="navigateWithUrl('./關於我.html')" class="about-me-a">關於我</a></p>
@@ -39,7 +43,7 @@
                 <p><a onclick="navigateWithUrl('https:\/\/')" class="about-me-a">伺服器狀態</a></p>
                 <p><a onclick="navigateWithUrl('minecraft:\/\/?addExternalServer=rabbit.fi.freemcserver.net%7Crabbit.fi.freemcserver.net:29501')" class="about-me-a">共同生存伺服器</a></p>
                 <p><a onclick="navigateWithUrl('https:\/\/')" class="about-me-a">伺服器狀態</a></p>
-            </span>
+            </div>
         </section>
 
         <!-- 工作 -->
@@ -51,13 +55,13 @@
                     <img src="./損毀.png" alt="項目1的縮圖" class="img-">
                     <h3>計算器</h3>
                     <p>簡單用來計算東西的東西</p>
-                    <a onclick="navigateWithUrl('./計算機.html')" class="button">查看項目</a>
+                    <a onclick="navigateWithUrl('./import.html')" class="button">查看項目</a>
                 </div>
                 <div class="work-item">
                     <img src="./損毀.png" alt="項目2的縮圖" class="img-">
-                    <h3>項目2</h3>
-                    <p>這裡真的沒有東西</p>
-                    <a onclick="navigateWithUrl('./.html')" class="button">查看項目</a>
+                    <h3>快捷方式</h3>
+                    <p>.</p>
+                    <a onclick="navigateWithUrl('./import.html')" class="button">查看項目</a>
                 </div>
             </div>
         </section>
@@ -106,13 +110,5 @@
     </script>
 
     <!-- JavaScript -->
-    <script>
-        function navigateWithUrl(url) {
-            // 构造目标 URL，并附加查询字符串
-            var targetUrl = 'import.html?url=' + encodeURIComponent(url);
-            window.location.href = targetUrl;
-        }
-    </script>
-
 </body>
 </html>
