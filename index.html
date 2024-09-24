@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jerry's HTML</title>
+    <title>Jerry的HTML</title>
     <link rel="icon" href="./圖標.jpg" type="image/icon">
     <link rel="stylesheet" href="https://108028.github.io/my-html-css/按鈕.css">
     <link rel="stylesheet" href="https://108028.github.io/my-html-css/圖片.css">
@@ -13,7 +13,6 @@
 </head>
 <body>
     <header>
-        <!-- 導航列 -->
         <img src="./圖標.ico" alt="網站圖標" class="img">
         <h1><a id="refreshButton" href="#">Jerry</a></h1>
         <nav>
@@ -26,79 +25,65 @@
         </nav>
     </header>
 
-    <!-- 關於我 -->
     <main>
         <section id="about">
             <h2>關於我</h2>
             <div class="about-me">
                 <p>連結</p>
-                <!-- 描述自己 -->
-                <p><a onclick="navigateWithUrl('./關於我.html')" class="about-me-a">關於我</a></p>
-                <!-- DC -->
-                <p><a onclick="navigateWithUrl('https:\/\/discord.gg/fHVKG894')" class="about-me-dc">Discord</a></p>
-                <!-- LINE -->
-                <p><a onclick="navigateWithUrl('https:\/\/line.me/ti/p/KXSNPztTqF')" class="about-me-line">LINE</a></p>
-                <!-- minecraft -->
-                <p><a onclick="navigateWithUrl('minecraft:\/\/?addExternalServer=urealms.aternos.me%7Curealms.aternos.me:22892')" class="about-me-a">我的minecraft個人伺服器</a></p>
-                <p><a onclick="navigateWithUrl('https:\/\/')" class="about-me-a">伺服器狀態</a></p>
+                <p><a onclick="navigateWithUrl('./關於我.html')" class="about-me-a">了解更多關於我</a></p>
+                <p><a href="https://discord.gg/fHVKG894" target="_blank" class="about-me-dc">Discord</a></p>
+                <p><a href="https://line.me/ti/p/KXSNPztTqF" target="_blank" class="about-me-line">LINE</a></p>
+                <p><a onclick="navigateWithUrl('minecraft:\/\/?addExternalServer=urealms.aternos.me%7Curealms.aternos.me:22892')" class="about-me-a">我的 Minecraft 伺服器</a></p>
+                <p><a onclick="navigateWithUrl('https://')" class="about-me-a">伺服器狀態</a></p>
                 <p><a onclick="navigateWithUrl('minecraft:\/\/?addExternalServer=rabbit.fi.freemcserver.net%7Crabbit.fi.freemcserver.net:29501')" class="about-me-a">共同生存伺服器</a></p>
-                <p><a onclick="navigateWithUrl('https:\/\/')" class="about-me-a">伺服器狀態</a></p>
+                <p><a onclick="navigateWithUrl('https://')" class="about-me-a">伺服器狀態</a></p>
             </div>
         </section>
-    </main>
-        <!-- 工作 -->
+
         <section id="work">
             <h2>工作</h2>
-            <br>
             <div class="work-grid">
-                <div class="work-item">
-                    <img src="./損毀.png" alt="項目1的縮圖" class="img-">
+                <article class="work-item">
+                    <img src="./損毀.png" alt="計算器項目的縮圖" class="img-">
                     <h3>計算器</h3>
                     <p>簡單用來計算東西的東西</p>
                     <a onclick="navigateWithUrl('./import.html')" class="button">查看項目</a>
-                </div>
-                <div class="work-item">
-                    <img src="./損毀.png" alt="項目2的縮圖" class="img-">
+                </article>
+                <article class="work-item">
+                    <img src="./損毀.png" alt="快捷方式項目的縮圖" class="img-">
                     <h3>快捷方式</h3>
-                    <p>.</p>
+                    <p>功能介紹。</p>
                     <a onclick="navigateWithUrl('./import.html')" class="button">查看項目</a>
-                </div>
+                </article>
             </div>
         </section>
 
         <section id="contact">
-            <!-- 聯絡我 -->
             <h2>聯絡我</h2>
-            <!-- 表單 -->
             <form action="mailto:kx108028@gmail.com" method="post" enctype="text/plain">
                 <div class="name">
                     <label for="name">姓名:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="email">
                     <label for="email">信箱:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="message">
                     <label for="message">訊息:</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit">發送訊息</button>
             </form>
-            <!-- 表單結束 -->
         </section>
     </main>
 
-    <!-- 頁尾 -->
     <footer>
-        <!-- 版權 -->
         <p>&copy; 2024 Jerry</p>
         <p>版權所有，仿冒必究</p>
     </footer>
 
-    <!-- 廣告 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8843985756860186" crossorigin="anonymous"></script>
-    <!-- 回應式廣告 -->
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-8843985756860186"
@@ -108,7 +93,5 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-
-    <!-- JavaScript -->
 </body>
 </html>
